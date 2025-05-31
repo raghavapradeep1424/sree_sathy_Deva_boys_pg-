@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shree Sathya Deva Boys PG</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background: #2C3E50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    nav {
+      background: #34495E;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      margin: 0.5rem 1rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    nav a.active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    section {
+      display: none;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    section.active {
+      display: block;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+    .room, .support-box {
+      background: #ecf0f1;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Shree Sathya Deva Boys PG</h1>
+    <p>Near Ecity Phase 2, Seasons Restaurant, Bangalore</p>
+  </header>
+
+  <nav>
+    <a onclick="showTab('info')" class="active">PG Information</a>
+    <a onclick="showTab('rooms')">Rooms</a>
+    <a onclick="showTab('nearby')">Nearby</a>
+    <a onclick="showTab('food')">Food Menu</a>
+    <a onclick="showTab('contact')">Contact Info</a>
+    <a onclick="showTab('prebooking')">Prebooking</a>
+    <a onclick="showTab('support')">Support</a>
+  </nav>
+
+  <section id="info" class="active">
+    <h2>PG Information</h2>
+    <p><strong>Owner:</strong> Narayana</p>
+    <p><strong>Location:</strong> 
+      <a href="https://maps.app.goo.gl/4yf2jJcJrBMpJpmv8" target="_blank">Google Maps Link</a>
+    </p>
+    <p><strong>Type:</strong> Boys PG</p>
+    <p><strong>Features:</strong></p>
+    <ul>
+      <li>Fully furnished rooms</li>
+      <li>Home-cooked food</li>
+      <li>High-speed WiFi</li>
+      <li>Laundry service</li>
+      <li>24/7 security</li>
+      <li>Daily housekeeping</li>
+      <li>Power backup</li>
+    </ul>
+  </section>
+
+  <section id="rooms">
+    <h2>Rooms & Pricing</h2>
+    <div class="room">
+      <h3>Single Sharing</h3>
+      <p>₹8,500/month with food & WiFi</p>
+    </div>
+    <div class="room">
+      <h3>Double Sharing</h3>
+      <p>₹6,500/month per person</p>
+    </div>
+  </section>
+
+  <section id="nearby">
+    <h2>Nearby Places</h2>
+    <ul>
+      <li>Infosys Campus: 1.5 KM</li>
+      <li>TCS: 1.5 KM</li>
+      <li>Tech Mahindra: 1.5 KM</li>
+      <li>Schneider Electric: 1.0 KM</li>
+      <li>Electronic City Bus Stop: 75 meters</li>
+      <li>Metro Station: 100 meters</li>
+    </ul>
+  </section>
+
+  <section id="food">
+    <h2>Food Menu</h2>
+    <ul>
+      <li>Monday: Idli</li>
+      <li>Tuesday: Chapathi</li>
+      <li>Wednesday: Dosa</li>
+      <li>Thursday: Utappa</li>
+      <li>Friday: Lemon Rice</li>
+      <li>Saturday: Puri</li>
+      <li>Sunday: Punugulu</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Information</h2>
+    <p><strong>Owner:</strong> Narayana</p>
+    <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
+    <p><strong>Email:</strong> pgshreesathya@gmail.com</p>
+  </section>
+
+  <section id="prebooking">
+    <h2>Prebooking Form</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="tel" placeholder="Mobile Number" required />
+      <textarea placeholder="Your Requirements..."></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section id="support">
+    <h2>Support</h2>
+    <form>
+      <input type="text" placeholder="Room Number" required />
+      <input type="text" placeholder="Tenant ID" required />
+      <input type="tel" placeholder="Registered Mobile Number" required />
+      <textarea placeholder="Your Issue or Request..."></textarea>
+      <button type="submit">Submit Support Request</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Shree Sathya Deva Boys PG</p>
+  </footer>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll("nav a");
+      tabs.forEach(tab => tab.classList.remove("active"));
+      navLinks.forEach(link => link.classList.remove("active"));
+      document.getElementById(tabId).classList.add("active");
+      event.target.classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
